@@ -1,5 +1,5 @@
 const makeTransaction = (quantity, pricePerDroid) => {
-    if (typeof quantity !== "*number" && typeof pricePerDroid !== "number") {
+    if (typeof quantity !== "number" && typeof pricePerDroid !== "number") {
         console.log("No validate data");
         return;
     }
