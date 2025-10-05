@@ -1,14 +1,14 @@
-const makeTransaction = (quantity, priceDroid, customerCredits) => {
+const makeTransaction = (quantity, pricePerDroid, customerCredits) => {
 
     if (isNaN(quantity) || isNaN(priceDroid) || isNaN(customerCredits)) {
         return console.log("Invalid date");
     }
-    const totalPrice = quantity * priceDroid;
+    const totalPrice = quantity * pricePerDroid;
 
     if (totalPrice > customerCredits) {
         return console.log("Insufficient funds!");
     }
-    return console.log(`Ypu ordered ${quantity} droids wroth ${totalPrice} credits`);
+    return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
 }
 
 
