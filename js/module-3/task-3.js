@@ -1,7 +1,11 @@
 const filterArray = (numbers, value) => {
     const newArray = [];
 
-    const searchNumb = numbers.map(number => number > value ? newArray.push(number) : false)
+    for (const number of numbers) {
+        if (number > value) {
+            newArray.push(number)
+        }
+    }
 
     return newArray
 }

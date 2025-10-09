@@ -1,12 +1,9 @@
 const makeArray = (firstArray, secondaryArray, maxLength) => {
     if (!Array.isArray(firstArray) || !Array.isArray(secondaryArray)) {
-        return "Invalid date"
+        return "Invalid input"
     }
 
-    const summaryLength = firstArray.length + secondaryArray.length;
-    const summaryArray = firstArray.concat(secondaryArray);
-    const finallyArray = summaryLength <= maxLength ? summaryArray : summaryArray.slice(0, maxLength)
-    return finallyArray;
+    return firstArray.concat(secondaryArray).slice(0, maxLength);
 }
 
 console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3)); // ["Mango", "Poly", "Ajax"]

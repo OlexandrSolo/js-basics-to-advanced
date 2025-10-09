@@ -1,8 +1,8 @@
 const slugify = (title) => {
-    if (!title.trim()) return "Invalid date"
+    if (!title.trim()) return "Invalid title"
 
     const reviewTitle = title.toLowerCase().split(" ")
-    console.log(reviewTitle.join('-'));
+    return reviewTitle.join('-');
 }
 
 console.log(slugify("Arrays for beginners")); // "arrays-for-beginners"
