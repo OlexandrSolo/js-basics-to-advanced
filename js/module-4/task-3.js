@@ -35,7 +35,6 @@ function countChars(str) {
     const array = str.split("");
     const result = array.reduce((acc, item) => {
         acc[item] = (acc[item] || 0) + 1;
-
         return acc
     }, {})
     return result
