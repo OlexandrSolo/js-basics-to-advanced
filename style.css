@@ -1,12 +1,18 @@
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 50px;
   list-style: none;
 }
 
+.itemGallery {
+  border: 2px solid #ccc;
+  padding: 5px;
+  margin: ;
+}
+
 .imgItem {
-  width: 300px;
+  width: 360px;
   height: auto;
   display: block;
 }
