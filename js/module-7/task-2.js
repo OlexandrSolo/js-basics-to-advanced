@@ -36,7 +36,7 @@ function createMarkup(images) {
         return item
     }).join("")
 
-    return galleryContainer.innerHTML = items
+    return galleryContainer.innerHTML = items;
 }
 
 createMarkup(images)
