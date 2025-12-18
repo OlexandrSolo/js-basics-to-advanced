@@ -79,17 +79,28 @@ function createGalleryItem(images) {
     />
   </a>
 </li>
-`
-    });
+`.trim();
+    }).join('');
 
-    galleryContainer.insertAdjacentHTML('beforeend', list.join(''));
+    galleryContainer.insertAdjacentHTML('beforeend', list);
 }
 
-galleryContainer.addEventListener("click", (event) => {
+galleryContainer.addEventListener("click", handleClick);
+
+function handleClick(event) {
     event.preventDefault();
     const target = event.target
     if (target.nodeName !== "IMG") {
         return;
     }
-    console.dir(target.dataset.source);
-});
+
+    const instance = basicLightbox.create(`
+	 <img
+      class="gallery-image"
+      src=${target.dataset.source}
+      data-source=${target.dataset.source}
+      alt=${target.alt}
+    />
+`)
+    instance.show()
+}
